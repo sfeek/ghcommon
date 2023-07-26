@@ -6,6 +6,7 @@ int main (void)
 	char *s1 = NULL;
 	char *s2 = NULL;
 	char *s3 = NULL;
+	char* s4 = NULL;
 
 	
 	size_t count = get_string (&s1,"\nEnter a string: ");
@@ -91,19 +92,53 @@ int main (void)
 
 	printf ("\n%s", s1);
 
-	if (truncate_string (&s1, 5))
+	copy_string(&s4, s1);
+
+	if (sub_string(&s4, 5, 6))
 	{
-		printf ("Truncate error occurred\n");
+		printf("Sub_string error occurred\n");
 		error = FAIL;
 		goto main_cleanup;
 	}
 
-	printf ("\nThe truncated string: %s\n", s1);
+	printf("\nThe substring of %s from 5 to 6 is: %s\n", s1,s4);
+
+	copy_string(&s4, s1);
+
+	if (left_string(&s4, 5))
+	{
+		printf("Right_string error occurred\n");
+		error = FAIL;
+		goto main_cleanup;
+	}
+
+	printf("\nThe left string of %s from 0 to 5 is: %s\n", s1, s4);
+
+	copy_string(&s4, s1);
+
+	if (right_string(&s4, 5))
+	{
+		printf("Left_string error occurred\n");
+		error = FAIL;
+		goto main_cleanup;
+	}
+
+	printf("\nThe right string of %s from 0 to 5 is: %s\n", s1, s4);
+
+	if (truncate_string (&s1, 3))
+	{
+		printf ("Right_string error occurred\n");
+		error = FAIL;
+		goto main_cleanup;
+	}
+
+	printf ("\nThe truncated at 3 string: %s\n", s1);
 
 main_cleanup:
 	if (s1) free (s1);
 	if (s2) free (s2);
 	if (s3) free (s3);
+	if (s4) free (s4);
 
 	
 	pause_for_enter("\nPress Enter to Exit!\n");

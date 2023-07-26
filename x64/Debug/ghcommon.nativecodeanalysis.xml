@@ -188,4 +188,546 @@
       </SFA>
     </PATH>
   </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+      <FILENAME>ghcommon.c</FILENAME>
+      <LINE>229</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 't'.</DESCRIPTION>
+    <FUNCTION>wrap_string</FUNCTION>
+    <DECORATED>wrap_string</DECORATED>
+    <FUNCLINE>205</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>207</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>208</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>208</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>210</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>212</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>3</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>216</LINE>
+        <COLUMN>3</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'t' is a 0 byte array</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>218</LINE>
+        <COLUMN>7</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 't==(((void *)0))' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>224</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'w' is equal to 1</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>224</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'w&lt;l')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>226</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'w%columns==0' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>229</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 't', (outside its readable range)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+      <FILENAME>ghcommon.c</FILENAME>
+      <LINE>233</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6386</DEFECTCODE>
+    <DESCRIPTION>Buffer overrun while writing to 't'.</DESCRIPTION>
+    <FUNCTION>wrap_string</FUNCTION>
+    <DECORATED>wrap_string</DECORATED>
+    <FUNCLINE>205</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>207</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>208</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>208</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>210</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>212</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>3</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>216</LINE>
+        <COLUMN>3</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'t' is a 0 byte array</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>218</LINE>
+        <COLUMN>7</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 't==(((void *)0))' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>224</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'w' is equal to 1</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>224</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'w&lt;l')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>226</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'w%columns==0')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>227</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>229</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 't[w]==32')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>231</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'nextspace==1')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>233</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>8</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid write to 't', (outside its writable range)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+      <FILENAME>ghcommon.c</FILENAME>
+      <LINE>284</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6386</DEFECTCODE>
+    <DESCRIPTION>Buffer overrun while writing to 'temp'.</DESCRIPTION>
+    <FUNCTION>left_string</FUNCTION>
+    <DECORATED>left_string</DECORATED>
+    <FUNCLINE>268</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>270</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>271</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>272</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>274</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>276</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'temp' is a 0 byte array</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>276</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '&lt;branch condition&gt;' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>279</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>279</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'x&lt;=s')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>281</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>279</LINE>
+        <COLUMN>22</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'x' may equal 1</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>279</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Exit this loop, ('x&lt;=s' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>284</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid write to 'temp', (outside its writable range)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+      <FILENAME>ghcommon.c</FILENAME>
+      <LINE>307</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6386</DEFECTCODE>
+    <DESCRIPTION>Buffer overrun while writing to 'temp'.</DESCRIPTION>
+    <FUNCTION>right_string</FUNCTION>
+    <DECORATED>right_string</DECORATED>
+    <FUNCLINE>291</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>293</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>294</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>295</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>297</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>299</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'temp' is a 0 byte array</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>299</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '&lt;branch condition&gt;' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>302</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>302</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'x&lt;=s')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>304</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>302</LINE>
+        <COLUMN>22</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'x' may equal 1</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>302</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Exit this loop, ('x&lt;=s' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>ghcommon.c</FILENAME>
+        <LINE>307</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid write to 'temp', (outside its writable range)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
 </DEFECTS>
