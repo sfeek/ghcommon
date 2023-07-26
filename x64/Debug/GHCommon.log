@@ -1,0 +1,8 @@
+﻿  ghcommon.c
+  test_numbers.c
+  Running Code Analysis for C/C++...
+  Generating Code...
+  GHCommon.vcxproj -> C:\Source Code\ghcommon\x64\Debug\GHCommon.exe
+C:\Source Code\ghcommon\ghcommon.c(198): warning C6386: Buffer overrun while writing to 'r'.
+C:\Source Code\ghcommon\test_numbers.c(60): warning C6385: Reading invalid data from 'buffer_i'.
+C:\Source Code\ghcommon\test_numbers.c(94): warning C6385: Reading invalid data from 'buffer_d'.

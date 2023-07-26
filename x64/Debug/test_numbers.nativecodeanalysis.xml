@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+      <FILENAME>test_numbers.c</FILENAME>
+      <LINE>60</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'buffer_i'.</DESCRIPTION>
+    <FUNCTION>main</FUNCTION>
+    <DECORATED>main</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>5</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>6</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>7</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>8</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>9</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>10</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>14</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>15</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>17</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>19</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>25</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>28</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>30</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>36</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>37</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>39</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'buffer_i' is a 0 byte array</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>41</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'buffer_i==(((void *)0))' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>44</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>44</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>46</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>44</LINE>
+        <COLUMN>40</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>44</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>46</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>44</LINE>
+        <COLUMN>40</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>44</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>50</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>53</LINE>
+        <COLUMN>4</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'buffer_i' is an In/Out argument to 'array_sort_int' (declared at c:\source code\ghcommon\ghcommon.h:38)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>56</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>58</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>58</LINE>
+        <COLUMN>22</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'j&lt;num_of_fields')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>60</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>58</LINE>
+        <COLUMN>40</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'j' may equal 1</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>58</LINE>
+        <COLUMN>22</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Continue this loop, (assume 'j&lt;num_of_fields')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>60</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'j' is an In/Out argument to 'printf' (declared at c:\program files (x86)\windows kits\10\include\10.0.22000.0\ucrt\stdio.h:950)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>60</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>8</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'buffer_i', (outside its readable range)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+      <FILENAME>test_numbers.c</FILENAME>
+      <LINE>94</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'buffer_d'.</DESCRIPTION>
+    <FUNCTION>main</FUNCTION>
+    <DECORATED>main</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>5</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>6</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>7</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>8</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>9</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>10</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>14</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>15</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>17</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>19</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>25</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>28</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>30</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>36</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>37</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>39</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>41</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>44</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>44</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>50</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>53</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>56</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>58</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>58</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>64</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>64</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>68</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>70</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>76</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>77</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>79</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'buffer_d' is a 0 byte array</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>79</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '&lt;branch condition&gt;' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>81</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>81</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>83</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>81</LINE>
+        <COLUMN>40</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>81</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>83</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>81</LINE>
+        <COLUMN>40</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>81</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>86</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>88</LINE>
+        <COLUMN>4</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'buffer_d' is an In/Out argument to 'array_sort_double' (declared at c:\source code\ghcommon\ghcommon.h:39)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>90</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>92</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>92</LINE>
+        <COLUMN>22</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'j&lt;num_of_fields')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>94</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>92</LINE>
+        <COLUMN>40</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'j' may equal 1</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>92</LINE>
+        <COLUMN>22</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Continue this loop, (assume 'j&lt;num_of_fields')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>94</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'j' is an In/Out argument to 'printf' (declared at c:\program files (x86)\windows kits\10\include\10.0.22000.0\ucrt\stdio.h:950)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Source Code\ghcommon\</FILEPATH>
+        <FILENAME>test_numbers.c</FILENAME>
+        <LINE>94</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>8</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'buffer_d', (outside its readable range)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

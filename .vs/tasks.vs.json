@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-test_numbers",
+      "appliesTo": "test_numbers.c",
+      "type": "launch"
+    }
+  ]
+}
