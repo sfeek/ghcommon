@@ -4,38 +4,43 @@ int main(void)
 {
     char *line = NULL;
     char **parsed = NULL;
-    int num_of_fields;
+    size_t num_of_fields;
     double *buffer_d = NULL;
     int *buffer_i = NULL;
+    char* numbers = NULL;
 
 
-    /* Get an Int and Double from the user
+    /* Get an Int and Double from the user */
     int i = get_int("\nEnter an Int: ");
     double x = get_double("\nEnter a Double: ");
 
     printf("\n\nThe Int was: %d and the Double was: %f\n",i,x);
-    */
 
+    if (double_to_string(&numbers, x, 3))
+    {
+        printf("\nDouble Creation failed!\n");
+        return FAIL;
+    }
+
+    printf("\nThe number to 3 places is %s\n", numbers);
+ 
     /* Get some ints in an array */
     get_string(&line,"\nEnter Ints separated by commas: ");
 
-    if (csv_parse(parsed,line, &num_of_fields))
+    if (csv_parse(&parsed,line, &num_of_fields))
     {
-        printf("String parsing failed!\n");
+        printf("\nString parsing failed!\n");
         return FAIL;
     }
 
     free(line);
     line = NULL;
 
-    buffer_i = malloc(sizeof(int) * num_of_fields);
-
-    if (buffer_i == NULL)
-        return FAIL;
+    if (!(buffer_i = malloc(sizeof(int) * num_of_fields))) return FAIL_MEMORY;
 
     for (int i = 0; i < num_of_fields; i++)
     {
-        string_toint(parsed[i], &buffer_i[i]);
+        string_to_int(parsed[i], &buffer_i[i]);
     }
 
     /* Make sure CSV parse strings are cleaned up*/
@@ -53,29 +58,26 @@ int main(void)
     }
 
     /* Free the buffer */
-    if (buffer_i) free(buffer_i);
+    if (buffer_i) free (buffer_i);
 
-    /*
-    /* Get some Doubles from the user 
+
+    /* Get some Doubles from the user */
     get_string(&line,"\nEnter Doubles separated by commas: ");
 
-    if (!(parsed = csv_parse(line, &num_of_fields)))
+    if (csv_parse(&parsed, line, &num_of_fields))
     {
         printf("String parsing failed!\n");
-        return 1;
+        return FAIL;
     }
 
     free(line);
     line = NULL;
 
-    buffer_d = realloc(buffer_d, sizeof(double) * num_of_fields);
-
-    if (buffer_d == NULL)
-        return 1;
+    if (!(buffer_d = malloc(sizeof(double) * num_of_fields))) return FAIL_MEMORY;
 
     for (int i = 0; i < num_of_fields; i++)
     {
-        string_todouble(parsed[i], &buffer_d[i]);
+        string_to_double(parsed[i], &buffer_d[i]);
     }
 
     cleanup_csv_strings(parsed, num_of_fields);
@@ -90,7 +92,7 @@ int main(void)
     }
 
     if (buffer_d) free(buffer_d);
-    */
+
     return SUCCESS;
 }
 

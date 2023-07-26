@@ -8,10 +8,10 @@ int main (void)
 	char *s3 = NULL;
 
 	
-	int count = get_string (&s1,"\nEnter a string: ");
-	int sl = len_string(&s1);
+	size_t count = get_string (&s1,"\nEnter a string: ");
+	size_t sl = len_string(&s1);
 
-	printf ("\nThe string had %d characters according to string_get and %d according to string_len. The string was: %s\n",count,sl,s1);
+	printf ("\nThe string had %zu characters according to get_string and %zu according to len_string. The string was: %s\n",count,sl,s1);
 		
 	if (copy_string (&s3, " We are taking out all spaces    from this sentence! "))
 	{
@@ -101,10 +101,11 @@ int main (void)
 	printf ("\nThe truncated string: %s\n", s1);
 
 main_cleanup:
-	free (s1);
-	free (s2);
-	free (s3);
+	if (s1) free (s1);
+	if (s2) free (s2);
+	if (s3) free (s3);
 
+	
 	pause_for_enter("\nPress Enter to Exit!\n");
 	return error;
 }

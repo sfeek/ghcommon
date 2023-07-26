@@ -15,16 +15,18 @@
 int append_string (char **, char *);
 int copy_string (char **, char *);
 int sprintf_string (char **, char *fmt, ... );
-int truncate_string (char **, int);
+int truncate_string (char **, size_t);
 int replace_string (char **, const char *, const char *);
-int wrap_string (char **, int);
-int get_string (char**, const char *);
-int len_string(char **);
-int string_todouble (const char *, double *);
-int string_toint (const char *, int *);
+int wrap_string (char **, size_t);
+size_t get_string (char**, const char *);
+size_t len_string(char **);
+int string_to_double (const char *, double *);
+int string_to_int (const char *, int *);
+size_t int_to_string (char**, int);
+size_t double_to_string (char**, double, int);
 
-int csv_parse(char ***,char *, int *);
-void cleanup_csv_strings(char **,int);
+int csv_parse(char ***,char *, size_t *);
+void cleanup_csv_strings(char **,size_t);
 
 void pause_for_enter (const char *);
 
@@ -33,5 +35,5 @@ double get_double (const char *);
 int get_int (const char *);
 double deg_to_rad(double);
 double rad_to_deg(double);
-void array_sort_int(int *, int);
-void array_sort_double(double *, int);
+void array_sort_int(int *, size_t);
+void array_sort_double(double *, size_t);

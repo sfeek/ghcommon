@@ -3,29 +3,23 @@
 int append_string(char **s1, char *s2)
 {
 	char *t;
-	int len_s1, len_s2;
+	size_t len_s1, len_s2;
 
-	/* Make sure there is something to append */
 	if (s2 == NULL)
 		return SUCCESS;
 
 	if ((len_s2 = strlen(s2)) == 0)
 		return SUCCESS;
 
-	/* Make space for expanded string */
 	if (*s1 == NULL)
 	{
 		len_s1 = 0;
-		*s1 = calloc(len_s1 + len_s2 + 1, sizeof(char));
-		if (*s1 == NULL)
-			return FAIL_MEMORY;
+		if (!(*s1 = calloc(len_s1 + len_s2 + 1, sizeof(char)))) return FAIL_MEMORY;
 	}
 	else
 	{
 		len_s1 = strlen(*s1);
-		t = realloc(*s1, len_s1 + len_s2 + 1);
-
-		if (t == NULL)
+		if (!(t = realloc(*s1, len_s1 + len_s2 + 1)))
 		{
 			free(*s1);
 			return FAIL_MEMORY;
@@ -34,28 +28,24 @@ int append_string(char **s1, char *s2)
 			*s1 = t;
 	}
 
-	/* Append */
 	strcat(*s1, s2);
 
 	return SUCCESS;
 }
 
-int len_string(char **s)
+size_t len_string(char **s)
 {
-	/* Return length */
 	return strlen(*s);
 }
 
-int get_string(char **s, const char *display)
+size_t get_string(char **s, const char *display)
 {
 	char c;
-	char cs[1];
-	int count = 0;
+	char cs[2];
+	size_t count = 0;
 
-	/* Show prompt text */
 	printf("%s", display);
 
-	/* Get characters from the keyboard one at a time */
 	while ((c = fgetc(stdin)) != '\n')
 	{
 		cs[0] = c;
@@ -66,16 +56,14 @@ int get_string(char **s, const char *display)
 		count++;
 	}
 
-	/* Return number of characters that were input*/
 	return count;
 }
 
 int copy_string(char **s, char *s1)
 {
 	char *t;
-	int len;
+	size_t len;
 
-	/* Make sure there is something to copy */
 	if (s1 == NULL)
 		return SUCCESS;
 
@@ -84,18 +72,13 @@ int copy_string(char **s, char *s1)
 
 	len = strlen(s1);
 
-	/* Make space */
 	if (*s == NULL)
 	{
-		*s = calloc(len + 1, sizeof(char));
-		if (*s == NULL)
-			return FAIL_MEMORY;
+		if (!(*s = calloc(len + 1, sizeof(char)))) 	return FAIL_MEMORY;
 	}
 	else
 	{
-		t = realloc(*s, len + 1);
-
-		if (t == NULL)
+		if (!(t = realloc(*s, len + 1)))
 		{
 			free(*s);
 			return FAIL_MEMORY;
@@ -104,38 +87,29 @@ int copy_string(char **s, char *s1)
 			*s = t;
 	}
 
-	/* Copy */
 	strcpy(*s, s1);
 
 	return SUCCESS;
 }
 
-int truncate_string(char **s, int len)
+int truncate_string(char **s, size_t len)
 {
 	char *t;
 
-	/* Make space */
-	if (*s != NULL)
+	if (*s == NULL) return SUCCESS;
+
+	if (len >= strlen(*s))
+		return FAIL; 
+
+	if (!(t = realloc(*s, len + 1)))
 	{
-		if (len >= strlen(*s))
-			return FAIL; /* If truncation is larger than string length, quit */
-
-		t = realloc(*s, len + 1);
-
-		if (t == NULL)
-		{
-			free(*s);
-			return FAIL_MEMORY;
-		}
-		else
-			*s = t;
+		free(*s);
+		return FAIL_MEMORY;
 	}
+	else
+		t[len] = '\0';
 
-	if (*s == NULL)
-		return SUCCESS;
-
-	/* Truncate by placing 0 byte*/
-	(*s)[len] = '\0';
+	*s = t;
 
 	return SUCCESS;
 }
@@ -143,14 +117,13 @@ int truncate_string(char **s, int len)
 int sprintf_string(char **s, char *fmt, ...)
 {
 	char *t;
-	int len;
+	size_t len;
 	va_list args;
-	/* Process arguments */
+
 	va_start(args, fmt);
 	len = vsnprintf(NULL, 0, fmt, args);
 	va_end(args);
 
-	/* Make space */
 	if (*s == NULL)
 	{
 		*s = malloc(len + 1);
@@ -170,7 +143,6 @@ int sprintf_string(char **s, char *fmt, ...)
 			*s = t;
 	}
 
-	/* Send out formatted string */
 	va_start(args, fmt);
 	vsprintf(*s, fmt, args);
 	va_end(args);
@@ -181,37 +153,32 @@ int sprintf_string(char **s, char *fmt, ...)
 int replace_string(char **s, const char *oldW, const char *newW)
 {
 	char *str;
-	int i, j, l, cnt = 0;
+	size_t i, j, l, cnt = 0;
 	char *r;
-	int newWlen = strlen(newW);
-	int oldWlen = strlen(oldW);
+	size_t newWlen = strlen(newW);
+	size_t oldWlen = strlen(oldW);
 
 	if (*s == NULL)
 		return FAIL;
 
 	str = strdup(*s);
-	l = strlen(str);
+	l = strlen(str) + 1;
 
-	/* Count number of times we need to replace */
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (strstr(&str[i], oldW) == &str[i])
 		{
 			cnt++;
-			i += oldWlen - 1;
+			i += oldWlen;
 		}
 	}
 
-	/* Make space */
-	r = realloc(*s, i + cnt * (newWlen - oldWlen) + 1);
-
-	if (r == NULL)
+	if (!(r = realloc(*s, i + cnt * (newWlen - oldWlen) + 1)))
 	{
 		free(*s);
 		return FAIL_MEMORY;
 	}
 
-	/* Replace the words */
 	i = 0;
 	j = 0;
 
@@ -220,8 +187,7 @@ int replace_string(char **s, const char *oldW, const char *newW)
 		if (strstr(str + i, oldW) == str + i)
 		{
 			if (newW[0] != '\0')
-				strcpy(&r[i], newW); /* Copy only if the new string is not empty */
-
+				strcpy(&r[i], newW); 
 			j += newWlen;
 			i += oldWlen;
 		}
@@ -229,7 +195,6 @@ int replace_string(char **s, const char *oldW, const char *newW)
 			r[j++] = str[i++];
 	}
 
-	/* Terminate and cleanup */
 	r[j] = '\0';
 	free(str);
 	*s = r;
@@ -237,17 +202,18 @@ int replace_string(char **s, const char *oldW, const char *newW)
 	return SUCCESS;
 }
 
-int wrap_string(char **s, int columns)
+int wrap_string(char **s, size_t columns)
 {
 	int nextspace = 0;
-	int l, w;
+	size_t l, w;
+
 	char *t;
 
 	if (*s == NULL)
 		return FAIL;
 
-	l = strlen(*s);
-	t = realloc(*s, l + 1); /* Make space */
+	l = strlen(*s) + 2;
+	t = (char*) realloc(*s, l); 
 
 	if (t == NULL)
 	{
@@ -255,7 +221,7 @@ int wrap_string(char **s, int columns)
 		return FAIL_MEMORY;
 	}
 
-	for (w = 1; w < l; w++) /* Make nice Line Wraps to columns-ish */
+	for (w = 1; w < l; w++) 
 	{
 		if (w % columns == 0)
 			nextspace = 1;
@@ -275,7 +241,7 @@ int wrap_string(char **s, int columns)
 	return SUCCESS;
 }
 
-/* Wait for someone to press ENTER*/
+
 void pause_for_enter (const char *display)
 {
 	char ch;
@@ -307,8 +273,7 @@ int float_less_than (double f1, double f2, double step)
 		return 0;
 }
 
-/* Make sure string is really a double */
-int string_todouble (const char *str, double *v)
+int string_to_double (const char *str, double *v)
 {
 	char *ptr;
 	errno = 0;
@@ -316,7 +281,6 @@ int string_todouble (const char *str, double *v)
 
 	if (errno == ERANGE)
 	{
-		printf ("\nNumber Overflow/Underflow Error!\n");
 		return FAIL_NUMBER;
 	}
 
@@ -326,8 +290,7 @@ int string_todouble (const char *str, double *v)
 	return SUCCESS;
 }
 
-/* Make sure string is really an integer */
-int string_toint (const char *str, int *v)
+int string_to_int (const char *str, int *v)
 {
 	char *ptr;
 	errno = 0;
@@ -348,7 +311,18 @@ int string_toint (const char *str, int *v)
 	return SUCCESS;
 }
 
-/* Get a double or decimal value */
+size_t int_to_string(char** s, int i)
+{
+	return sprintf_string(s, "%d", i);
+}
+
+size_t double_to_string(char** s, double d, int digits)
+{
+	char* dlen = NULL;
+	sprintf_string(&dlen, "%%0.%df", digits);
+	return sprintf_string (s, dlen, d);
+}
+
 double get_double (const char *display)
 {
 	char *buffer = NULL;
@@ -358,7 +332,7 @@ double get_double (const char *display)
 	while (1)
 	{
 		get_string (&buffer, display);
-		rtn = string_todouble (buffer, &value);
+		rtn = string_to_double (buffer, &value);
 		free (buffer);
 
 		if (rtn == SUCCESS)
@@ -366,7 +340,6 @@ double get_double (const char *display)
 	}
 }
 
-/* Get an integer value */
 int get_int (const char *display)
 {
 	char *buffer = NULL;
@@ -376,7 +349,7 @@ int get_int (const char *display)
 	while (1)
 	{
 		get_string (&buffer, display);
-		rtn = string_toint (buffer, &value);
+		rtn = string_to_int (buffer, &value);
 		free (buffer);
 
 		if (rtn == EXIT_SUCCESS)
@@ -384,21 +357,17 @@ int get_int (const char *display)
 	}
 }
 
-/* Convert Degrees to Radians */
 double deg_to_rad(double deg)
 {
     return PI / 180.0 * deg;
 }
 
-
-/* Convert Radians to Degrees */
 double rad_to_deg(double rad)
 {
 	return rad * 180.0 / PI;
 }
 
-/* Sort an array of doubles */
-void array_sort_double(double *array, int n)
+void array_sort_double(double *array, size_t n)
 {
     int i, j;
 	double temp;
@@ -417,8 +386,7 @@ void array_sort_double(double *array, int n)
     }
 }
 
-/* Sort an array of doubles */
-void array_sort_int(int *array, int n)
+void array_sort_int(int *array, size_t n)
 {
     int i, j, temp;
 
@@ -437,15 +405,16 @@ void array_sort_int(int *array, int n)
 }
 
 /* CSV Functions*/
-int csv_parse (char ***Array, char *str, int *number_of_fields)
+int csv_parse (char ***array, char *str, size_t *number_of_fields)
 {
 	char *newStr = NULL;
 	char currentCharacter;
 	char **strArray = NULL;
 	int quote = 0;
-	int csvLength = strlen (str);
+	size_t csvLength = strlen (str);
 	int maxFieldCount = 2; /* Start with two fields as MAX */
-	int *commaPositions = NULL;
+	int *comma_positions = NULL;
+	int *comma_temp = NULL;
 	int currentField = 0;
 	int cleanStringPosition = 0;
 	int i;
@@ -453,7 +422,7 @@ int csv_parse (char ***Array, char *str, int *number_of_fields)
 	int fieldLength;
 
 	/* Allocate memory for the comma position array */
-	if (! (commaPositions = calloc (1, 1 + sizeof (int) * maxFieldCount)))
+	if (! (comma_positions = calloc (1, 1 + sizeof (int) * maxFieldCount)))
 	{
 		return FAIL_MEMORY;
 	}
@@ -511,14 +480,18 @@ int csv_parse (char ***Array, char *str, int *number_of_fields)
 							maxFieldCount *= 2;
 
 							/* Allocate more memory for the array*/
-							if (! (commaPositions = realloc (commaPositions, sizeof (int) * maxFieldCount)))
+							comma_temp = realloc(comma_positions, sizeof(int) * maxFieldCount);
+
+							if (comma_temp == NULL)
 							{
 								return FAIL_MEMORY;
 							}
+							else
+								comma_positions = comma_temp;
 						}
 
 						/* Keep track of the comma positions and move to the next field*/
-						commaPositions[currentField++] = cleanStringPosition;
+						comma_positions[currentField++] = cleanStringPosition;
 					}
 				}
 		}
@@ -530,11 +503,11 @@ int csv_parse (char ***Array, char *str, int *number_of_fields)
 	/* Make sure that clean string gets NULL terminator */
 	newStr[cleanStringPosition] = 0;
 	/* Make sure to mark the end of the string as a "comma" position so that the last field gets included in the array and include the last field */
-	commaPositions[currentField++] = cleanStringPosition;
+	comma_positions[currentField++] = cleanStringPosition;
 	/* Record the Total number of fields to return to the calling function */
 	*number_of_fields = currentField;
 	/* Allocate an array of pointers to chars, not actually allocating any strings themselves */
-	strArray = realloc (Array,sizeof (char *) * currentField );
+	strArray = malloc (sizeof (char *) * currentField );
 	if (strArray == NULL)
 		return FAIL_MEMORY;
 
@@ -542,27 +515,27 @@ int csv_parse (char ***Array, char *str, int *number_of_fields)
 	for (i = 0; i < currentField; i++)
 	{
 		/* Calculate length of the current field plus the Null Terminator*/
-		fieldLength = commaPositions[i] - startPosition + 1;
+		fieldLength = comma_positions[i] - startPosition + 1;
 		/* Replace the comma with a Null terminator */
-		newStr[commaPositions[i]] = 0;
+		newStr[comma_positions[i]] = 0;
 		/* Allocate memory for the current field */
-		strArray[i] = calloc (1, sizeof (char) * fieldLength);
+		strArray[i] = malloc (sizeof (char) * fieldLength);
 		if (strArray[i] == NULL)
 			return FAIL_MEMORY;
 		/* Copy the string into the new array */
 		memcpy (strArray[i], newStr + startPosition, fieldLength);
 		/* Move our start position to the next field */
-		startPosition = commaPositions[i] + 1;
+		startPosition = comma_positions[i] + 1;
 	}
 
 	/* Clean up the dynamic arrays */
-	if (commaPositions) (commaPositions);
-	commaPositions = NULL;
+	if (comma_positions) (comma_positions);
+	comma_positions = NULL;
 	if (newStr) free (newStr);
 	newStr = NULL;
 
 
-
+	*array = strArray;
 	/* Return the new array back to the calling function */
 
 	return SUCCESS;
@@ -573,7 +546,7 @@ int csv_parse (char ***Array, char *str, int *number_of_fields)
             Number of strings
     Return: none
 */
-void cleanup_csv_strings (char **strArray, int numberOfStrings)
+void cleanup_csv_strings (char **strArray, size_t numberOfStrings)
 {
 	int i;
 
