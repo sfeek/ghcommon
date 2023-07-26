@@ -8,6 +8,7 @@ int main(void)
     double *buffer_d = NULL;
     int *buffer_i = NULL;
     char* numbers = NULL;
+    size_t sz;
 
 
     /* Get an Int and Double from the user */
@@ -16,13 +17,15 @@ int main(void)
 
     printf("\n\nThe Int was: %d and the Double was: %f\n",i,x);
 
-    if (double_to_string(&numbers, x, 3))
-    {
-        printf("\nDouble Creation failed!\n");
-        return FAIL;
-    }
+    sz = double_to_string(&numbers, x, 3);
 
-    printf("\nThe number to 3 places is %s\n", numbers);
+    printf("\nThe number to 3 places is %s and is %zu in length\n", numbers, sz);
+
+    sz = 0;
+
+    sz = int_to_string(&numbers, i);
+
+    printf("\nThe number is %s and is %zu in length\n", numbers, sz);
  
     /* Get some ints in an array */
     get_string(&line,"\nEnter Ints separated by commas: ");

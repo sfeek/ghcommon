@@ -24,6 +24,9 @@ int string_to_double (const char *, double *);
 int string_to_int (const char *, int *);
 size_t int_to_string (char**, int);
 size_t double_to_string (char**, double, int);
+int sub_string(char**, size_t, size_t);
+int left_string(char** str, size_t s);
+int right_string(char** str, size_t s);
 
 int csv_parse(char ***,char *, size_t *);
 void cleanup_csv_strings(char **,size_t);

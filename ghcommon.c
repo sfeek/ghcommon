@@ -19,7 +19,7 @@ int append_string(char **s1, char *s2)
 	else
 	{
 		len_s1 = strlen(*s1);
-		if (!(t = realloc(*s1, len_s1 + len_s2 + 1)))
+		if (!(t = realloc(*s1, (len_s1 + len_s2 + 1) * sizeof(char))))
 		{
 			free(*s1);
 			return FAIL_MEMORY;
@@ -101,13 +101,13 @@ int truncate_string(char **s, size_t len)
 	if (len >= strlen(*s))
 		return FAIL; 
 
-	if (!(t = realloc(*s, len + 1)))
+	if (!(t = realloc(*s, (len + 2) * sizeof(char))))
 	{
 		free(*s);
 		return FAIL_MEMORY;
 	}
 	else
-		t[len] = '\0';
+		t[len + 1] = '\0';
 
 	*s = t;
 
@@ -173,7 +173,7 @@ int replace_string(char **s, const char *oldW, const char *newW)
 		}
 	}
 
-	if (!(r = realloc(*s, i + cnt * (newWlen - oldWlen) + 1)))
+	if (!(r = realloc(*s, (i + cnt * (newWlen - oldWlen) + 1) * sizeof(char))))
 	{
 		free(*s);
 		return FAIL_MEMORY;
@@ -202,7 +202,7 @@ int replace_string(char **s, const char *oldW, const char *newW)
 	return SUCCESS;
 }
 
-int wrap_string(char **s, size_t columns)
+int wrap_string (char **s, size_t columns)
 {
 	int nextspace = 0;
 	size_t l, w;
@@ -213,7 +213,7 @@ int wrap_string(char **s, size_t columns)
 		return FAIL;
 
 	l = strlen(*s) + 2;
-	t = (char*) realloc(*s, l); 
+	t = (char*) realloc(*s, l * sizeof(char)); 
 
 	if (t == NULL)
 	{
@@ -237,6 +237,76 @@ int wrap_string(char **s, size_t columns)
 	}
 
 	*s = t;
+
+	return SUCCESS;
+}
+
+int sub_string(char** str, size_t s, size_t e)
+{
+	char* temp;
+	size_t x;
+	size_t l = strlen(*str);
+
+	if (e <= s) return FAIL_NUMBER;
+	if (s > l || e > l) return FAIL_NUMBER;
+
+	if (!(temp = malloc((e - s + 2) * sizeof(char))))
+		return FAIL_MEMORY;
+
+	for (x = 0; x <= (e - s); x++)
+	{
+		temp[x] = (*str)[s + x];
+	}
+
+	temp[x] = '\0';
+
+	*str = temp;
+
+	return SUCCESS;
+}
+
+int left_string(char** str, size_t s)
+{
+	char* temp;
+	size_t x;
+	size_t l = strlen(*str);
+
+	if (s > l) return FAIL_NUMBER;
+
+	if (!(temp = malloc((s + 2) * sizeof(char))))
+		return FAIL_MEMORY;
+
+	for (x = 0; x <= s; x++)
+	{
+		temp[x] = (*str)[x];
+	}
+
+	temp[x] = '\0';
+
+	*str = temp;
+
+	return SUCCESS;
+}
+
+int right_string(char** str, size_t s)
+{
+	char* temp;
+	size_t x;
+	size_t l = strlen(*str);
+
+	if (s > l) return FAIL_NUMBER;
+
+	if (!(temp = malloc((s + 2) * sizeof(char))))
+		return FAIL_MEMORY;
+
+	for (x = 0; x <= s; x++)
+	{
+		temp[x] = (*str)[x + (l-s-1)];
+	}
+
+	temp[x] = '\0';
+
+	*str = temp;
 
 	return SUCCESS;
 }
@@ -313,14 +383,16 @@ int string_to_int (const char *str, int *v)
 
 size_t int_to_string(char** s, int i)
 {
-	return sprintf_string(s, "%d", i);
+	sprintf_string(s, "%d", i);
+	return strlen(*s);
 }
 
 size_t double_to_string(char** s, double d, int digits)
 {
 	char* dlen = NULL;
 	sprintf_string(&dlen, "%%0.%df", digits);
-	return sprintf_string (s, dlen, d);
+	sprintf_string(s, dlen, d);
+	return strlen(*s);
 }
 
 double get_double (const char *display)
@@ -334,6 +406,7 @@ double get_double (const char *display)
 		get_string (&buffer, display);
 		rtn = string_to_double (buffer, &value);
 		free (buffer);
+		buffer = NULL;
 
 		if (rtn == SUCCESS)
 			return value;
@@ -351,6 +424,7 @@ int get_int (const char *display)
 		get_string (&buffer, display);
 		rtn = string_to_int (buffer, &value);
 		free (buffer);
+		buffer = NULL;
 
 		if (rtn == EXIT_SUCCESS)
 			return value;
@@ -428,7 +502,7 @@ int csv_parse (char ***array, char *str, size_t *number_of_fields)
 	}
 
 	/* Allocate memory for "cleaned up" string the same size as the original string to guarantee that it is big enough */
-	if (! (newStr = calloc (1, 1 + sizeof (char) * csvLength)))
+	if (! (newStr = calloc (1, sizeof (char) * (csvLength + 1))))
 	{
 		return FAIL_MEMORY;
 	}
