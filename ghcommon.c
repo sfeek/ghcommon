@@ -21,7 +21,8 @@ int append_string(char **s1, char *s2)
 		len_s1 = strlen(*s1);
 		if (!(t = realloc(*s1, (len_s1 + len_s2 + 1) * sizeof(char))))
 		{
-			free(*s1);
+			if (*s1) free(*s1);
+			*s1 = NULL;
 			return FAIL_MEMORY;
 		}
 		else
@@ -78,9 +79,10 @@ int copy_string(char **s, char *s1)
 	}
 	else
 	{
-		if (!(t = realloc(*s, len + 1)))
+		if (!(t = realloc(*s, (len + 1) * sizeof(char))))
 		{
-			free(*s);
+			if (*s) free(*s);
+			*s = NULL;
 			return FAIL_MEMORY;
 		}
 		else
@@ -99,11 +101,12 @@ int truncate_string(char **s, size_t len)
 	if (*s == NULL) return SUCCESS;
 
 	if (len >= strlen(*s))
-		return FAIL; 
+		return FAIL_PARAMETER; 
 
 	if (!(t = realloc(*s, (len + 2) * sizeof(char))))
 	{
-		free(*s);
+		if (*s) free(*s);
+		*s = NULL;
 		return FAIL_MEMORY;
 	}
 	else
@@ -126,17 +129,14 @@ int sprintf_string(char **s, char *fmt, ...)
 
 	if (*s == NULL)
 	{
-		*s = malloc(len + 1);
-		if (*s == NULL)
-			return FAIL_MEMORY;
+		if (!(*s = malloc((len + 1) * sizeof(char)))) return FAIL_MEMORY;
 	}
 	else
 	{
-		t = realloc(*s, len + 1);
-
-		if (t == NULL)
+		if (!(t = realloc(*s, (len + 1) * sizeof(char))))
 		{
-			free(*s);
+			if (*s) free(*s);
+			*s = NULL;
 			return FAIL_MEMORY;
 		}
 		else
@@ -159,10 +159,10 @@ int replace_string(char **s, const char *oldW, const char *newW)
 	size_t oldWlen = strlen(oldW);
 
 	if (*s == NULL)
-		return FAIL;
+		return FAIL_PARAMETER;
 
 	str = strdup(*s);
-	l = strlen(str) + 1;
+	l = strlen(str);
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -175,7 +175,8 @@ int replace_string(char **s, const char *oldW, const char *newW)
 
 	if (!(r = realloc(*s, (i + cnt * (newWlen - oldWlen) + 1) * sizeof(char))))
 	{
-		free(*s);
+		if (*s) free(*s);
+		*s = NULL;
 		return FAIL_MEMORY;
 	}
 
@@ -196,7 +197,10 @@ int replace_string(char **s, const char *oldW, const char *newW)
 	}
 
 	r[j] = '\0';
-	free(str);
+
+	if (str) free(str);
+	str = NULL;
+
 	*s = r;
 
 	return SUCCESS;
@@ -212,12 +216,12 @@ int wrap_string (char **s, size_t columns)
 	if (*s == NULL)
 		return FAIL;
 
-	l = strlen(*s) + 2;
-	t = (char*) realloc(*s, l * sizeof(char)); 
+	l = strlen(*s);
 
-	if (t == NULL)
+	if (!(t = realloc(*s, (l + 1) * sizeof(char))))
 	{
-		free(*s);
+		if (*s) free(*s);
+		*s = NULL;
 		return FAIL_MEMORY;
 	}
 
@@ -235,6 +239,7 @@ int wrap_string (char **s, size_t columns)
 			}
 		}
 	}
+	t[w] = '\0';
 
 	*s = t;
 
@@ -247,8 +252,8 @@ int sub_string(char** str, size_t s, size_t e)
 	size_t x;
 	size_t l = strlen(*str);
 
-	if (e <= s) return FAIL_NUMBER;
-	if (s > l || e > l) return FAIL_NUMBER;
+	if (e < s) return FAIL_PARAMETER;
+	if (s > l || e > l) return FAIL_PARAMETER;
 
 	if (!(temp = malloc((e - s + 2) * sizeof(char))))
 		return FAIL_MEMORY;
@@ -271,7 +276,7 @@ int left_string(char** str, size_t s)
 	size_t x;
 	size_t l = strlen(*str);
 
-	if (s > l) return FAIL_NUMBER;
+	if (s > l) return FAIL_PARAMETER;
 
 	if (!(temp = malloc((s + 2) * sizeof(char))))
 		return FAIL_MEMORY;
@@ -294,7 +299,7 @@ int right_string(char** str, size_t s)
 	size_t x;
 	size_t l = strlen(*str);
 
-	if (s > l) return FAIL_NUMBER;
+	if (s > l) return FAIL_PARAMETER;
 
 	if (!(temp = malloc((s + 2) * sizeof(char))))
 		return FAIL_MEMORY;
@@ -368,14 +373,12 @@ int string_to_int (const char *str, int *v)
 
 	if (errno == ERANGE)
 	{
-		printf ("\nNumber Overflow/Underflow Error!\n");
-		return FAIL;
+		return FAIL_NUMBER;
 	}
 
 	if (str == ptr)
 	{
-		printf ("\nInvalid Number Conversion Error!\n");
-		return FAIL;
+		return FAIL_NUMBER;
 	}
 
 	return SUCCESS;
@@ -405,7 +408,7 @@ double get_double (const char *display)
 	{
 		get_string (&buffer, display);
 		rtn = string_to_double (buffer, &value);
-		free (buffer);
+		if (buffer) free (buffer);
 		buffer = NULL;
 
 		if (rtn == SUCCESS)
@@ -423,7 +426,7 @@ int get_int (const char *display)
 	{
 		get_string (&buffer, display);
 		rtn = string_to_int (buffer, &value);
-		free (buffer);
+		if (buffer) free (buffer);
 		buffer = NULL;
 
 		if (rtn == EXIT_SUCCESS)
@@ -496,7 +499,7 @@ int csv_parse (char ***array, char *str, size_t *number_of_fields)
 	int fieldLength;
 
 	/* Allocate memory for the comma position array */
-	if (! (comma_positions = calloc (1, 1 + sizeof (int) * maxFieldCount)))
+	if (! (comma_positions = calloc (1, sizeof (int) * maxFieldCount)))
 	{
 		return FAIL_MEMORY;
 	}
@@ -603,8 +606,9 @@ int csv_parse (char ***array, char *str, size_t *number_of_fields)
 	}
 
 	/* Clean up the dynamic arrays */
-	if (comma_positions) (comma_positions);
+	if (comma_positions) free (comma_positions);
 	comma_positions = NULL;
+
 	if (newStr) free (newStr);
 	newStr = NULL;
 
@@ -627,11 +631,11 @@ void cleanup_csv_strings (char **strArray, size_t numberOfStrings)
 	/* Free the individual strings */
 	for (i = 0; i < numberOfStrings; i++)
 	{
-		free (strArray[i]);
+		if (strArray[i]) free (strArray[i]);
 		strArray[i] = NULL;
 	}
 
 	/* Once the strings themselves are freed, free the actual array itself */
-	free (strArray);
+	if (strArray) free (strArray);
 	strArray = NULL;
 }

@@ -20,7 +20,7 @@
       "artifacts": [
         {
           "location": {
-            "uri": "file:///c:/source code/ghcommon/test_string.c"
+            "uri": "file:///d:/source code/ghcommon/test_string.c"
           },
           "roles": [
             "analysisTarget"
@@ -31,10 +31,10 @@
         },
         {
           "location": {
-            "uri": "file:///c:/source code/ghcommon/ghcommon.h"
+            "uri": "file:///d:/source code/ghcommon/ghcommon.h"
           },
           "hashes": {
-            "sha-256": "4d025bb61cf60d4d7cfc7e3581cbd55349e7131eee149d618430ed29929c8cd7"
+            "sha-256": "3f003ba10c3d00ba02126d85d141963763b1d719832ee3d74bbabe691e5fd695"
           }
         }
       ]

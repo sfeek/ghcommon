@@ -13,12 +13,12 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                  "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                 },
                 "region": {
-                  "startLine": 198,
+                  "startLine": 199,
                   "startColumn": 2,
-                  "endLine": 198,
+                  "endLine": 199,
                   "endColumn": 9
                 }
               },
@@ -40,7 +40,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 155,
@@ -54,7 +54,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 156,
@@ -68,7 +68,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 156,
@@ -82,7 +82,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 156,
@@ -96,7 +96,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 156,
@@ -110,7 +110,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 157,
@@ -124,7 +124,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 158,
@@ -138,7 +138,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 159,
@@ -152,7 +152,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 161,
@@ -166,7 +166,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 164,
@@ -180,7 +180,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 165,
@@ -194,7 +194,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 167,
@@ -208,7 +208,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 167,
@@ -222,7 +222,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 176,
@@ -242,21 +242,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
-                          },
-                          "region": {
-                            "startLine": 182,
-                            "startColumn": 4
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 183,
@@ -270,10 +256,24 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 185,
+                            "startLine": 184,
+                            "startColumn": 4
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 186,
                             "startColumn": 9
                           }
                         }
@@ -284,10 +284,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 185,
+                            "startLine": 186,
                             "startColumn": 16
                           }
                         },
@@ -304,10 +304,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 187,
+                            "startLine": 188,
                             "startColumn": 29
                           }
                         },
@@ -324,10 +324,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 195,
+                            "startLine": 196,
                             "startColumn": 11
                           }
                         },
@@ -344,10 +344,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 185,
+                            "startLine": 186,
                             "startColumn": 16
                           }
                         },
@@ -364,10 +364,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 198,
+                            "startLine": 199,
                             "startColumn": 7
                           }
                         },
@@ -395,12 +395,12 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                  "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                 },
                 "region": {
-                  "startLine": 229,
+                  "startLine": 233,
                   "startColumn": 7,
-                  "endLine": 229,
+                  "endLine": 233,
                   "endColumn": 15
                 }
               },
@@ -422,10 +422,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 207,
+                            "startLine": 211,
                             "startColumn": 6
                           }
                         }
@@ -436,49 +436,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
-                          },
-                          "region": {
-                            "startLine": 208,
-                            "startColumn": 9
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
-                          },
-                          "region": {
-                            "startLine": 208,
-                            "startColumn": 12
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
-                          },
-                          "region": {
-                            "startLine": 210,
-                            "startColumn": 8
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 212,
@@ -492,10 +450,52 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 215,
+                            "startLine": 212,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 214,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 216,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 219,
                             "startColumn": 4
                           }
                         }
@@ -506,35 +506,15 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 216,
-                            "startColumn": 4
+                            "startLine": 221,
+                            "startColumn": 6
                           }
                         },
                         "message": {
-                          "text": "'t' is a 0 byte array"
-                        }
-                      },
-                      "kinds": [
-                        "declaration"
-                      ],
-                      "importance": "essential"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
-                          },
-                          "region": {
-                            "startLine": 218,
-                            "startColumn": 8
-                          }
-                        },
-                        "message": {
-                          "text": "Skip this branch, (assume 't==(((void *)0))' is false)"
+                          "text": "'t' may be NULL (Skip this branch)"
                         }
                       },
                       "kinds": [
@@ -546,10 +526,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 224,
+                            "startLine": 228,
                             "startColumn": 9
                           }
                         },
@@ -566,10 +546,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 224,
+                            "startLine": 228,
                             "startColumn": 16
                           }
                         },
@@ -586,10 +566,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 226,
+                            "startLine": 230,
                             "startColumn": 19
                           }
                         },
@@ -606,10 +586,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 229,
+                            "startLine": 233,
                             "startColumn": 12
                           }
                         },
@@ -637,13 +617,13 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                  "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                 },
                 "region": {
-                  "startLine": 233,
-                  "startColumn": 5,
-                  "endLine": 233,
-                  "endColumn": 12
+                  "startLine": 242,
+                  "startColumn": 2,
+                  "endLine": 242,
+                  "endColumn": 9
                 }
               },
               "logicalLocations": [
@@ -664,10 +644,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 207,
+                            "startLine": 211,
                             "startColumn": 6
                           }
                         }
@@ -678,49 +658,7 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
-                          },
-                          "region": {
-                            "startLine": 208,
-                            "startColumn": 9
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
-                          },
-                          "region": {
-                            "startLine": 208,
-                            "startColumn": 12
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
-                          },
-                          "region": {
-                            "startLine": 210,
-                            "startColumn": 8
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 212,
@@ -734,10 +672,52 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 215,
+                            "startLine": 212,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 214,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 216,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 219,
                             "startColumn": 4
                           }
                         }
@@ -748,35 +728,15 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 216,
-                            "startColumn": 4
+                            "startLine": 221,
+                            "startColumn": 6
                           }
                         },
                         "message": {
-                          "text": "'t' is a 0 byte array"
-                        }
-                      },
-                      "kinds": [
-                        "declaration"
-                      ],
-                      "importance": "essential"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
-                          },
-                          "region": {
-                            "startLine": 218,
-                            "startColumn": 8
-                          }
-                        },
-                        "message": {
-                          "text": "Skip this branch, (assume 't==(((void *)0))' is false)"
+                          "text": "'t' may be NULL (Skip this branch)"
                         }
                       },
                       "kinds": [
@@ -788,10 +748,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 224,
+                            "startLine": 228,
                             "startColumn": 9
                           }
                         },
@@ -808,15 +768,15 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 224,
+                            "startLine": 228,
                             "startColumn": 16
                           }
                         },
                         "message": {
-                          "text": "Enter this loop, (assume 'w<l')"
+                          "text": "Skip this loop, (assume 'w<l' is false)"
                         }
                       },
                       "kinds": [
@@ -828,85 +788,11 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 226,
-                            "startColumn": 19
-                          }
-                        },
-                        "message": {
-                          "text": "Enter this branch, (assume 'w%columns==0')"
-                        }
-                      },
-                      "kinds": [
-                        "branch"
-                      ],
-                      "importance": "important"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
-                          },
-                          "region": {
-                            "startLine": 227,
-                            "startColumn": 14
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
-                          },
-                          "region": {
-                            "startLine": 229,
-                            "startColumn": 12
-                          }
-                        },
-                        "message": {
-                          "text": "Enter this branch, (assume 't[w]==32')"
-                        }
-                      },
-                      "kinds": [
-                        "branch"
-                      ],
-                      "importance": "important"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
-                          },
-                          "region": {
-                            "startLine": 231,
-                            "startColumn": 18
-                          }
-                        },
-                        "message": {
-                          "text": "Enter this branch, (assume 'nextspace==1')"
-                        }
-                      },
-                      "kinds": [
-                        "branch"
-                      ],
-                      "importance": "important"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
-                          },
-                          "region": {
-                            "startLine": 233,
-                            "startColumn": 10
+                            "startLine": 242,
+                            "startColumn": 7
                           }
                         },
                         "message": {
@@ -933,19 +819,19 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                  "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                 },
                 "region": {
-                  "startLine": 284,
+                  "startLine": 266,
                   "startColumn": 2,
-                  "endLine": 284,
+                  "endLine": 266,
                   "endColumn": 12
                 }
               },
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "left_string",
-                  "decoratedName": "left_string",
+                  "fullyQualifiedName": "sub_string",
+                  "decoratedName": "sub_string",
                   "kind": "function"
                 }
               ]
@@ -960,10 +846,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 270,
+                            "startLine": 251,
                             "startColumn": 8
                           }
                         }
@@ -974,10 +860,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 271,
+                            "startLine": 252,
                             "startColumn": 9
                           }
                         }
@@ -988,10 +874,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 272,
+                            "startLine": 253,
                             "startColumn": 9
                           }
                         }
@@ -1002,10 +888,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 274,
+                            "startLine": 255,
                             "startColumn": 8
                           }
                         }
@@ -1016,10 +902,24 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 276,
+                            "startLine": 256,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 258,
                             "startColumn": 6
                           }
                         },
@@ -1036,10 +936,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 276,
+                            "startLine": 258,
                             "startColumn": 6
                           }
                         },
@@ -1056,10 +956,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 279,
+                            "startLine": 261,
                             "startColumn": 9
                           }
                         }
@@ -1070,15 +970,15 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 279,
+                            "startLine": 261,
                             "startColumn": 16
                           }
                         },
                         "message": {
-                          "text": "Enter this loop, (assume 'x<=s')"
+                          "text": "Enter this loop, (assume 'x<=((e-s))')"
                         }
                       },
                       "kinds": [
@@ -1090,10 +990,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 281,
+                            "startLine": 263,
                             "startColumn": 11
                           }
                         }
@@ -1104,11 +1004,11 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 279,
-                            "startColumn": 23
+                            "startLine": 261,
+                            "startColumn": 29
                           }
                         },
                         "message": {
@@ -1124,15 +1024,15 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 279,
+                            "startLine": 261,
                             "startColumn": 16
                           }
                         },
                         "message": {
-                          "text": "Exit this loop, ('x<=s' is false)"
+                          "text": "Exit this loop, ('x<=((e-s))' is false)"
                         }
                       },
                       "kinds": [
@@ -1144,10 +1044,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 284,
+                            "startLine": 266,
                             "startColumn": 10
                           }
                         },
@@ -1175,12 +1075,254 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                  "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                 },
                 "region": {
-                  "startLine": 307,
+                  "startLine": 289,
                   "startColumn": 2,
-                  "endLine": 307,
+                  "endLine": 289,
+                  "endColumn": 12
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "left_string",
+                  "decoratedName": "left_string",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 275,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 276,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 277,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 279,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 281,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'temp' is a 0 byte array"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 281,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '<branch condition>' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 284,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 284,
+                            "startColumn": 16
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this loop, (assume 'x<=s')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 286,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 284,
+                            "startColumn": 23
+                          }
+                        },
+                        "message": {
+                          "text": "'x' may equal 1"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 284,
+                            "startColumn": 16
+                          }
+                        },
+                        "message": {
+                          "text": "Exit this loop, ('x<=s' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 289,
+                            "startColumn": 10
+                          }
+                        },
+                        "message": {
+                          "text": "Invalid write to 'temp', (outside its writable range)"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6386",
+          "message": {
+            "text": "Buffer overrun while writing to 'temp'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                },
+                "region": {
+                  "startLine": 312,
+                  "startColumn": 2,
+                  "endLine": 312,
                   "endColumn": 12
                 }
               },
@@ -1202,10 +1344,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 293,
+                            "startLine": 298,
                             "startColumn": 8
                           }
                         }
@@ -1216,52 +1358,52 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
-                          },
-                          "region": {
-                            "startLine": 294,
-                            "startColumn": 9
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
-                          },
-                          "region": {
-                            "startLine": 295,
-                            "startColumn": 9
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
-                          },
-                          "region": {
-                            "startLine": 297,
-                            "startColumn": 8
-                          }
-                        }
-                      },
-                      "importance": "unimportant"
-                    },
-                    {
-                      "location": {
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
                             "startLine": 299,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 300,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 302,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
+                          },
+                          "region": {
+                            "startLine": 304,
                             "startColumn": 6
                           }
                         },
@@ -1278,10 +1420,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 299,
+                            "startLine": 304,
                             "startColumn": 6
                           }
                         },
@@ -1298,10 +1440,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 302,
+                            "startLine": 307,
                             "startColumn": 9
                           }
                         }
@@ -1312,10 +1454,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 302,
+                            "startLine": 307,
                             "startColumn": 16
                           }
                         },
@@ -1332,10 +1474,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 304,
+                            "startLine": 309,
                             "startColumn": 11
                           }
                         }
@@ -1346,10 +1488,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 302,
+                            "startLine": 307,
                             "startColumn": 23
                           }
                         },
@@ -1366,10 +1508,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 302,
+                            "startLine": 307,
                             "startColumn": 16
                           }
                         },
@@ -1386,10 +1528,10 @@
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
-                            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+                            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
                           },
                           "region": {
-                            "startLine": 307,
+                            "startLine": 312,
                             "startColumn": 10
                           }
                         },
@@ -1425,22 +1567,22 @@
       "artifacts": [
         {
           "location": {
-            "uri": "file:///C:/Source Code/ghcommon/ghcommon.c"
+            "uri": "file:///D:/Source Code/ghcommon/ghcommon.c"
           },
           "roles": [
             "analysisTarget",
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "90c8272d4d7db0dd7c0203eb23eae33251bfeb2c88aa77de3198dd901fc6caaf"
+            "sha-256": "afb982e17b2ea44c048f9f4a98cdf6f7cc9000a1affe3b02c725933795031be6"
           }
         },
         {
           "location": {
-            "uri": "file:///c:/source code/ghcommon/ghcommon.h"
+            "uri": "file:///d:/source code/ghcommon/ghcommon.h"
           },
           "hashes": {
-            "sha-256": "4d025bb61cf60d4d7cfc7e3581cbd55349e7131eee149d618430ed29929c8cd7"
+            "sha-256": "3f003ba10c3d00ba02126d85d141963763b1d719832ee3d74bbabe691e5fd695"
           }
         }
       ]
