@@ -1,4 +1,1 @@
 C:\Source Code\ghcommon\x64\Debug\GHCommon.exe
-D:\Source Code\ghcommon\x64\Debug\GHCommon.exe
-D:\Source Code\ghcommon\x64\Debug\GHCommon.exe.lastcodeanalysissucceeded
-D:\Source Code\ghcommon\x64\Debug\NativeCodeAnalysis.read.1.tlog

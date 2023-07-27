@@ -121,7 +121,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ghcommon.c" />
-    <ClCompile Include="test_string.c" />
+    <ClCompile Include="test_numbers.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ghcommon.h" />

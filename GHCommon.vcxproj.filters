@@ -18,7 +18,7 @@
     <ClCompile Include="ghcommon.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test_string.c">
+    <ClCompile Include="test_numbers.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
