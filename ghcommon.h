@@ -3,6 +3,8 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+#define FALSE 0 /* False */
+#define TRUE 1 /* True */
 #define SUCCESS 0 /* Great success! */
 #define FAIL 1 /* General Fail */
 #define FAIL_MEMORY 2 /* Failed memory allocation */
