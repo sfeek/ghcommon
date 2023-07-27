@@ -3,10 +3,13 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-#define SUCCESS 0
-#define FAIL 1
-#define FAIL_MEMORY 2
-#define FAIL_NUMBER 3
+#define FALSE 0 /* False */
+#define TRUE 1 /* True */
+#define SUCCESS 0 /* Great success! */
+#define FAIL 1 /* General Fail */
+#define FAIL_MEMORY 2 /* Failed memory allocation */
+#define FAIL_NUMBER 3 /* Invalid number */
+#define FAIL_PARAMETER 4 /* Invalid value in a parameter */
 
 #define PI 3.14159265358979323846
 #define E 2.71828182845904523536
