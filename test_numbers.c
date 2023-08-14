@@ -28,9 +28,9 @@ int main(void)
     printf("\nThe number is %s and is %zu in length\n", numbers, sz);
  
     /* Get some ints in an array */
-    get_string(&line,"\nEnter Ints separated by commas: ");
-
-    if (csv_parse(&parsed,line, &num_of_fields))
+    while (get_string(&line, "\nEnter Ints separated by commas: ") == 0);
+    
+    if (csv_parse(&parsed, line, &num_of_fields))
     {
         printf("\nString parsing failed!\n");
         return FAIL;
@@ -65,7 +65,7 @@ int main(void)
 
 
     /* Get some Doubles from the user */
-    get_string(&line,"\nEnter Doubles separated by commas: ");
+    while (get_string(&line,"\nEnter Doubles separated by commas: ") == 0);
 
     if (csv_parse(&parsed, line, &num_of_fields))
     {

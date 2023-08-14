@@ -1,11 +1,1 @@
-﻿  ghcommon.c
-  test_string.c
-  Running Code Analysis for C/C++...
-  Generating Code...
-  GHCommon.vcxproj -> D:\Source Code\ghcommon\x64\Debug\GHCommon.exe
-D:\Source Code\ghcommon\ghcommon.c(199): warning C6386: Buffer overrun while writing to 'r'.
-D:\Source Code\ghcommon\ghcommon.c(233): warning C6385: Reading invalid data from 't'.
-D:\Source Code\ghcommon\ghcommon.c(242): warning C6386: Buffer overrun while writing to 't'.
-D:\Source Code\ghcommon\ghcommon.c(266): warning C6386: Buffer overrun while writing to 'temp'.
-D:\Source Code\ghcommon\ghcommon.c(289): warning C6386: Buffer overrun while writing to 'temp'.
-D:\Source Code\ghcommon\ghcommon.c(312): warning C6386: Buffer overrun while writing to 'temp'.
+﻿

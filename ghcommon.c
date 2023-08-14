@@ -518,41 +518,45 @@ void array_sort_int(int *array, size_t n)
 /* CSV Functions*/
 int csv_parse(char ***array, char *str, size_t *number_of_fields)
 {
-	char *newStr = NULL;
-	char currentCharacter;
-	char **strArray = NULL;
+	char *new_str = NULL;
+	char current_character;
+	char **str_array = NULL;
 	int quote = 0;
-	size_t csvLength = strlen(str);
-	int maxFieldCount = 2; /* Start with two fields as MAX */
+	size_t csv_length; 
+	int max_field_count = 2; /* Start with two fields as MAX */
 	int *comma_positions = NULL;
 	int *comma_temp = NULL;
-	int currentField = 0;
-	int cleanStringPosition = 0;
+	int current_field = 0;
+	int clean_string_position = 0;
 	int i;
-	int startPosition = 0;
-	int fieldLength;
+	int start_position = 0;
+	int field_length;
+
+	if (str == NULL) return FAIL_PARAMETER;
+
+	csv_length= strlen(str);
 
 	/* Allocate memory for the comma position array */
-	if (!(comma_positions = calloc(1, sizeof(int) * maxFieldCount)))
+	if (!(comma_positions = calloc(1, sizeof(int) * max_field_count)))
 	{
 		return FAIL_MEMORY;
 	}
 
 	/* Allocate memory for "cleaned up" string the same size as the original string to guarantee that it is big enough */
-	if (!(newStr = calloc(1, sizeof(char) * (csvLength + 1))))
+	if (!(new_str = calloc(1, sizeof(char) * (csv_length + 1))))
 	{
 		return FAIL_MEMORY;
 	}
 
 	/* First pass through to record the correct comma positions */
-	for (i = 0; i < csvLength; i++)
+	for (i = 0; i < csv_length; i++)
 	{
 		/* Get a single character and skip any control or garbage characters */
-		if ((currentCharacter = str[i]) < 32)
+		if ((current_character = str[i]) < 32)
 			continue;
 
 		/* Handle quotes, escapes and commas */
-		switch (currentCharacter)
+		switch (current_character)
 		{
 		/* Check for escape character not inside quotes */
 		case 92:
@@ -562,7 +566,7 @@ int csv_parse(char ***array, char *str, size_t *number_of_fields)
 				/* Move ahead one character */
 				i++;
 				/* Keep the next good character and move to the next good character position*/
-				newStr[cleanStringPosition++] = str[i];
+				new_str[clean_string_position++] = str[i];
 				/* Move on to the next new character */
 				continue;
 			}
@@ -585,13 +589,13 @@ int csv_parse(char ***array, char *str, size_t *number_of_fields)
 			if (quote == 0)
 			{
 				/* Check to see if we need to grow our comma position array */
-				if (currentField == maxFieldCount - 1)
+				if (current_field == max_field_count - 1)
 				{
 					/* Double in size each time */
-					maxFieldCount *= 2;
+					max_field_count *= 2;
 
 					/* Allocate more memory for the array*/
-					comma_temp = realloc(comma_positions, sizeof(int) * maxFieldCount);
+					comma_temp = realloc(comma_positions, sizeof(int) * max_field_count);
 
 					if (comma_temp == NULL)
 					{
@@ -602,41 +606,41 @@ int csv_parse(char ***array, char *str, size_t *number_of_fields)
 				}
 
 				/* Keep track of the comma positions and move to the next field*/
-				comma_positions[currentField++] = cleanStringPosition;
+				comma_positions[current_field++] = clean_string_position;
 			}
 		}
 		}
 
 		/* Keep the good characters and move to the next good character position  */
-		newStr[cleanStringPosition++] = currentCharacter;
+		new_str[clean_string_position++] = current_character;
 	}
 
 	/* Make sure that clean string gets NULL terminator */
-	newStr[cleanStringPosition] = 0;
+	new_str[clean_string_position] = 0;
 	/* Make sure to mark the end of the string as a "comma" position so that the last field gets included in the array and include the last field */
-	comma_positions[currentField++] = cleanStringPosition;
+	comma_positions[current_field++] = clean_string_position;
 	/* Record the Total number of fields to return to the calling function */
-	*number_of_fields = currentField;
+	*number_of_fields = current_field;
 	/* Allocate an array of pointers to chars, not actually allocating any strings themselves */
-	strArray = malloc(sizeof(char *) * currentField);
-	if (strArray == NULL)
+	str_array = malloc(sizeof(char *) * current_field);
+	if (str_array == NULL)
 		return FAIL_MEMORY;
 
 	/* Copy the strings to the new string array */
-	for (i = 0; i < currentField; i++)
+	for (i = 0; i < current_field; i++)
 	{
 		/* Calculate length of the current field plus the Null Terminator*/
-		fieldLength = comma_positions[i] - startPosition + 1;
+		field_length = comma_positions[i] - start_position + 1;
 		/* Replace the comma with a Null terminator */
-		newStr[comma_positions[i]] = 0;
+		new_str[comma_positions[i]] = 0;
 		/* Allocate memory for the current field */
-		strArray[i] = malloc(sizeof(char) * fieldLength);
-		if (strArray[i] == NULL)
+		str_array[i] = malloc(sizeof(char) * field_length);
+		if (str_array[i] == NULL)
 			return FAIL_MEMORY;
 		/* Copy the string into the new array */
-		memcpy(strArray[i], newStr + startPosition, fieldLength);
+		memcpy(str_array[i], new_str + start_position, field_length);
 		/* Move our start position to the next field */
-		startPosition = comma_positions[i] + 1;
+		start_position = comma_positions[i] + 1;
 	}
 
 	/* Clean up the dynamic arrays */
@@ -644,11 +648,11 @@ int csv_parse(char ***array, char *str, size_t *number_of_fields)
 		free(comma_positions);
 	comma_positions = NULL;
 
-	if (newStr)
-		free(newStr);
-	newStr = NULL;
+	if (new_str)
+		free(new_str);
+	new_str = NULL;
 
-	*array = strArray;
+	*array = str_array;
 	/* Return the new array back to the calling function */
 
 	return SUCCESS;
