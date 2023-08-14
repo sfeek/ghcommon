@@ -486,9 +486,16 @@ void d_sort(double arr[], int low, int high)
 	}
 }
 
-void array_sort_double(double arr[], int count)
+int array_sort_double(double arr[], int count)
 {
+	if (arr == NULL)
+		return FAIL_PARAMETER;
+	if (count < 2)
+		return FAIL_PARAMETER;
+
 	d_sort(arr, 0, count - 1);
+
+	return SUCCESS;
 }
 
 void i_swap(int *a, int *b)
@@ -529,9 +536,16 @@ void i_sort(int arr[], int low, int high)
 	}
 }
 
-void array_sort_int(int arr[], int count)
+int array_sort_int(int arr[], int count)
 {
+	if (arr == NULL)
+		return FAIL_PARAMETER;
+	if (count < 2)
+		return FAIL_PARAMETER;
+
 	i_sort(arr, 0, count - 1);
+
+	return SUCCESS;
 }
 
 /* CSV Functions*/
