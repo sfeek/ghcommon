@@ -3,13 +3,10 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-#define FALSE 0 /* False */
-#define TRUE 1 /* True */
-#define SUCCESS 0 /* Great success! */
-#define FAIL 1 /* General Fail */
-#define FAIL_MEMORY 2 /* Failed memory allocation */
-#define FAIL_NUMBER 3 /* Invalid number */
-#define FAIL_PARAMETER 4 /* Invalid value in a parameter */
+#define SUCCESS 0
+#define FAIL 1
+#define FAIL_MEMORY 2
+#define FAIL_NUMBER 3
 
 #define PI 3.14159265358979323846
 #define E 2.71828182845904523536
@@ -41,5 +38,13 @@ double get_double (const char *);
 int get_int (const char *);
 double deg_to_rad(double);
 double rad_to_deg(double);
-void array_sort_int(int *, size_t);
-void array_sort_double(double *, size_t);
+
+void d_swap(double *, double *);
+int d_partition(double[], int, int);
+void d_sort(double [], int, int);
+void array_sort_double(double[], int);
+
+void i_swap(int *, int *);
+int i_partition(int [], int, int);
+void i_sort(int [], int, int);
+void array_sort_int(int [], int);
