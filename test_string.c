@@ -135,12 +135,11 @@ int main (void)
 	printf ("\nThe truncated at 3 string: %s\n", s1);
 
 main_cleanup:
-	if (s1) free (s1);
-	if (s2) free (s2);
-	if (s3) free (s3);
-	if (s4) free (s4);
+	free_malloc(s1);
+	free_malloc(s2);
+	free_malloc(s3);
+	free_malloc(s4);
 
-	
 	pause_for_enter("\nPress Enter to Exit!\n");
 	return error;
 }
