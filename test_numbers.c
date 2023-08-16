@@ -9,6 +9,8 @@ int main(void)
     int *buffer_i = NULL;
     char* numbers = NULL;
     size_t sz;
+    fraction fract;
+    double d;
 
 
     /* Get an Int and Double from the user */
@@ -20,8 +22,6 @@ int main(void)
     sz = double_to_string(&numbers, x, 3);
 
     printf("\nThe number to 3 places is %s and is %zu in length\n", numbers, sz);
-
-    sz = 0;
 
     sz = int_to_string(&numbers, i);
 
@@ -36,8 +36,7 @@ int main(void)
         return FAIL;
     }
 
-    free(line);
-    line = NULL;
+    free_malloc(line);
 
     if (!(buffer_i = malloc(sizeof(int) * num_of_fields))) return FAIL_MEMORY;
 
@@ -61,8 +60,7 @@ int main(void)
     }
 
     /* Free the buffer */
-    if (buffer_i) free (buffer_i);
-
+    free_malloc(buffer_i);
 
     /* Get some Doubles from the user */
     get_string(&line,"\nEnter Doubles separated by commas: ");
@@ -73,9 +71,9 @@ int main(void)
         return FAIL;
     }
 
-    free(line);
-    line = NULL;
+    free_malloc(line);
 
+    /* Make space, parse and sort */
     if (!(buffer_d = malloc(sizeof(double) * num_of_fields))) return FAIL_MEMORY;
 
     for (int i = 0; i < num_of_fields; i++)
@@ -88,14 +86,20 @@ int main(void)
     array_sort_double(buffer_d, num_of_fields);
 
     printf("\n\nSorted Doubles: \n");
-
     for (int j = 0; j < num_of_fields; j++)
     {
         printf("%f\n", buffer_d[j]);
     }
 
-    if (buffer_d) free (buffer_d);
+    free_malloc(buffer_d);
 
+    // Test fraction conversion
+    fract = decimal_to_fraction(0.375,1e-6);
+    d = fraction_to_decimal(fract);
+
+    printf("\n%d/%d = %f\n",fract.n,fract.d,d);
+
+    
     return SUCCESS;
 }
 

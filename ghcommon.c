@@ -346,13 +346,70 @@ void pause_for_enter(const char *display)
 	return;
 }
 
-void free_malloc(void *m)
+/* Math Functions */
+
+fraction decimal_to_fraction(double value, double accuracy)
 {
-	if (m) free(m);
-	m = NULL;
+	fraction f;
+
+	int sign = value < 0 ? -1 : 1;
+	value = value < 0 ? -value : value;
+	int integerpart = (int)value;
+	value -= integerpart;
+	double minimalvalue = value - accuracy;
+
+	if (minimalvalue < 0.0)
+	{
+		f.n = sign * integerpart;
+		f.d = 1;
+		return f;
+	}
+
+	double maximumvalue = value + accuracy;
+
+	if (maximumvalue > 1.0)
+	{
+		f.n = sign * (integerpart + 1);
+		f.d = 1;
+
+		return f;
+	}
+
+	int b = 1;
+	int d = (int)(1 / maximumvalue);
+	double left_n = minimalvalue; // b * minimalvalue - a
+	double left_d = 1.0 - d * minimalvalue; // c - d * minimalvalue
+	double right_n = 1.0 - d * maximumvalue; // c - d * maximumvalue
+	double right_d = maximumvalue; // b * maximumvalue - a   
+
+	while (TRUE)
+	{
+		if (left_n < left_d) break;
+		int n = (int)(left_n / left_d);
+		b += n * d;
+		left_n -= n * left_d;
+		right_d -= n * right_n;
+		if (right_n < right_d) break;
+		n = (int)(right_n / right_d);
+		d += n * b;
+		left_d -= n * left_n;
+		right_n -= n * right_d;
+	}
+
+
+	int denominator = b + d;
+	int numerator = (int)(value * denominator + 0.5);
+
+	f.n = sign * (integerpart * denominator + numerator);
+	f.d = denominator;
+
+	return f;
 }
 
-/* Math Functions */
+double fraction_to_decimal(fraction f)
+{
+	return (double)f.n/(double)f.d;
+}
 
 /* Used with FOR loops to properly handle fractional step values */
 int float_less_than(double f1, double f2, double step)
@@ -716,11 +773,6 @@ int csv_parse(char ***array, char *str, size_t *number_of_fields)
 	return SUCCESS;
 }
 
-/*  Clean up an array of strings
-	Input:  Array of strings
-			Number of strings
-	Return: none
-*/
 void cleanup_csv_strings(char **strArray, size_t numberOfStrings)
 {
 	int i;
