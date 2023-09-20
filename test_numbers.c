@@ -99,6 +99,14 @@ int main(void)
 
     printf("\n%d/%d = %f\n",fract.n,fract.d,d);
 
+    double f1 = 3.1415;
+    double f2 = 3.141499;
+
+    if (float_compare(f1,f2,1e-6))
+        printf("\n%f = %f", f1, f2);
+    else
+        printf("\n%f != %f", f1, f2);
+
     
     return SUCCESS;
 }
