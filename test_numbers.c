@@ -103,11 +103,24 @@ int main(void)
     double f2 = 3.141499;
 
     if (float_compare(f1,f2,1e-6))
-        printf("\n%f = %f", f1, f2);
+        printf("\n%g = %g", f1, f2);
     else
-        printf("\n%f != %f", f1, f2);
+        printf("\n%g != %g", f1, f2);
 
-    
+    printf("\n\nTesting transistion function\n");
+
+    double t;
+
+    // Test transition function
+    if (transition(&t,5,0,1,3,0.05)) return FAIL;
+    printf("\n5, 3 %g", t);
+
+    if (transition(&t,2,0,1,3,0.05)) return FAIL;
+    printf("\n2, 3 %g\n\n", t);
+
+    printf("\nTest MIN and MAX macros %g %g\n",MAX(3.0,5.0),MIN(2.0,3.0));
+
+
     return SUCCESS;
 }
 

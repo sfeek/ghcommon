@@ -432,6 +432,26 @@ int float_compare(double f1, double f2, double precision)
 		return FALSE;
 }
 
+/*
+	Transition smoothly between two values at a certain cutoff value
+	*rtn is a pointer to the return value, x = value, t0 = transition start value, t1 = transition end value, c = cut-off, w = slope or rate of cut off
+*/
+int transition(double *rtn, double x, double t0, double x1, double c, double w)
+{
+	if (w == 0.0)
+		return FAIL_PARAMETER;
+
+	double t = 1.0 + exp(-(c - x) / w);
+
+	if (t == 0.0)
+		return FAIL_NUMBER;
+
+	double sD = 1.0 / t;
+	*rtn = t0 + (x1 - t0) * (1 - sD);
+
+	return SUCCESS;
+}
+
 int string_to_double(const char *str, double *v)
 {
 	char *ptr;

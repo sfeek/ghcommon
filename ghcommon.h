@@ -15,6 +15,9 @@
 #define PI 3.14159265358979323846
 #define E 2.71828182845904523536
 
+#define MIN(a,b) (((a)<(b))?(a):(b))
+#define MAX(a,b) (((a)>(b))?(a):(b))
+
 #define free_malloc(p) (free(p), p = NULL)
 
 typedef struct Fraction
@@ -46,6 +49,7 @@ void pause_for_enter(const char *);
 
 int float_less_than(double, double, double);
 int float_compare(double, double, double);
+int transition(double *, double, double, double, double, double);
 double get_double(const char *);
 int get_int(const char *);
 double deg_to_rad(double);
