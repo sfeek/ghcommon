@@ -15,8 +15,8 @@
 #define PI 3.14159265358979323846
 #define E 2.71828182845904523536
 
-#define MIN(a,b) (((a)<(b))?(a):(b))
-#define MAX(a,b) (((a)>(b))?(a):(b))
+#define MIN(a, b) (((a) < (b)) ? (a) : (b))
+#define MAX(a, b) (((a) > (b)) ? (a) : (b))
 
 #define free_malloc(p) (free(p), p = NULL)
 
@@ -54,6 +54,10 @@ double get_double(const char *);
 int get_int(const char *);
 double deg_to_rad(double);
 double rad_to_deg(double);
+double mod(double a,double m);
+double normalize_angle_360(double);
+double normalize_angle_180(double);
+int angle_in_range(double, double, double);
 
 fraction decimal_to_fraction(double, double);
 double fraction_to_decimal(fraction);

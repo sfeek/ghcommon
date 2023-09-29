@@ -452,6 +452,54 @@ int transition(double *rtn, double x, double t0, double x1, double c, double w)
 	return SUCCESS;
 }
 
+double normalize_angle_360(double angle)
+{
+	while (angle > 360.0)
+		angle -= 360.0;
+	while (angle < -360.0)
+		angle += 360.0;
+
+	return angle;
+}
+
+double mod(double a, double m)
+{
+	while (a > m)
+		a -= m;
+	while (a < -m)
+		a += m;
+
+	return a;
+}
+
+double normalize_angle_180(double angle)
+{
+	while (angle < -180.0)
+		angle += 360.0;
+	while (angle > 180.0)
+		angle -= 360.0;
+
+	return angle;
+}
+
+int angle_in_range(double testAngle, double a, double b)
+{
+	a -= testAngle;
+	b -= testAngle;
+
+	normalize_angle_180(a);
+	normalize_angle_180(b);
+
+	if (a * b >= 0)
+		return 0;
+	return fabs(a - b) < 180.0;
+}
+
+double distance(double x1, double y1, double x2, double y2)
+{
+	return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2) * 1.0);
+}
+
 int string_to_double(const char *str, double *v)
 {
 	char *ptr;

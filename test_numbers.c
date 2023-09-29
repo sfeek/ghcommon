@@ -7,17 +7,16 @@ int main(void)
     size_t num_of_fields;
     double *buffer_d = NULL;
     int *buffer_i = NULL;
-    char* numbers = NULL;
+    char *numbers = NULL;
     size_t sz;
     fraction fract;
     double d;
-
 
     /* Get an Int and Double from the user */
     int i = get_int("\nEnter an Int: ");
     double x = get_double("\nEnter a Double: ");
 
-    printf("\n\nThe Int was: %d and the Double was: %f\n",i,x);
+    printf("\n\nThe Int was: %d and the Double was: %f\n", i, x);
 
     sz = double_to_string(&numbers, x, 3);
 
@@ -26,11 +25,11 @@ int main(void)
     sz = int_to_string(&numbers, i);
 
     printf("\nThe number is %s and is %zu in length\n", numbers, sz);
- 
-    /* Get some ints in an array */
-    get_string(&line,"\nEnter Ints separated by commas: ");
 
-    if (csv_parse(&parsed,line, &num_of_fields))
+    /* Get some ints in an array */
+    get_string(&line, "\nEnter Ints separated by commas: ");
+
+    if (csv_parse(&parsed, line, &num_of_fields))
     {
         printf("\nString parsing failed!\n");
         return FAIL;
@@ -38,7 +37,8 @@ int main(void)
 
     free_malloc(line);
 
-    if (!(buffer_i = malloc(sizeof(int) * num_of_fields))) return FAIL_MEMORY;
+    if (!(buffer_i = malloc(sizeof(int) * num_of_fields)))
+        return FAIL_MEMORY;
 
     for (int i = 0; i < num_of_fields; i++)
     {
@@ -63,7 +63,7 @@ int main(void)
     free_malloc(buffer_i);
 
     /* Get some Doubles from the user */
-    get_string(&line,"\nEnter Doubles separated by commas: ");
+    get_string(&line, "\nEnter Doubles separated by commas: ");
 
     if (csv_parse(&parsed, line, &num_of_fields))
     {
@@ -74,7 +74,8 @@ int main(void)
     free_malloc(line);
 
     /* Make space, parse and sort */
-    if (!(buffer_d = malloc(sizeof(double) * num_of_fields))) return FAIL_MEMORY;
+    if (!(buffer_d = malloc(sizeof(double) * num_of_fields)))
+        return FAIL_MEMORY;
 
     for (int i = 0; i < num_of_fields; i++)
     {
@@ -94,15 +95,15 @@ int main(void)
     free_malloc(buffer_d);
 
     // Test fraction conversion
-    fract = decimal_to_fraction(0.375,1e-6);
+    fract = decimal_to_fraction(0.375, 1e-6);
     d = fraction_to_decimal(fract);
 
-    printf("\n%d/%d = %f\n",fract.n,fract.d,d);
+    printf("\n%d/%d = %f\n", fract.n, fract.d, d);
 
     double f1 = 3.1415;
     double f2 = 3.141499;
 
-    if (float_compare(f1,f2,1e-6))
+    if (float_compare(f1, f2, 1e-6))
         printf("\n%g = %g", f1, f2);
     else
         printf("\n%g != %g", f1, f2);
@@ -112,15 +113,20 @@ int main(void)
     double t;
 
     // Test transition function
-    if (transition(&t,5,0,1,3,0.05)) return FAIL;
+    if (transition(&t, 5, 0, 1, 3, 0.05))
+        return FAIL;
     printf("\n5, 3 %g", t);
 
-    if (transition(&t,2,0,1,3,0.05)) return FAIL;
+    if (transition(&t, 2, 0, 1, 3, 0.05))
+        return FAIL;
     printf("\n2, 3 %g\n\n", t);
 
-    printf("\nTest MIN and MAX macros %g %g\n",MAX(3.0,5.0),MIN(2.0,3.0));
+    printf("\nTest MIN and MAX macros %g %g\n", MAX(3.0, 5.0), MIN(2.0, 3.0));
 
+    double n1 = 20.5;
+    double n2 = 16.0;
+
+    printf("\n %g MOD %g = %g", n1, n2, mod(n1, n2));
 
     return SUCCESS;
 }
-
