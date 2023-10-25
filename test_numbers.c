@@ -128,5 +128,9 @@ int main(void)
 
     printf("\n %g MOD %g = %g", n1, n2, mod(n1, n2));
 
+    double tf = get_fraction("\n Enter a fraction: ");
+
+    printf("\n The fraction was: %3.4f", tf);
+
     return SUCCESS;
 }
