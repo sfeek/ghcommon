@@ -1,3 +1,4 @@
+// Version 2.5
 #include "ghcommon.h"
 
 #ifdef _WIN32
@@ -598,6 +599,12 @@ double get_fraction(const char *display)
 		{
 			num_filled = sscanf(buffer,"%d %d/%d", &i, &n, &d);
 
+			if (d == 0) 
+			{
+				free_malloc(buffer);
+				continue;
+			}
+
 			if (num_filled == 3) 
 			{
 				rtn = SUCCESS;
@@ -609,6 +616,13 @@ double get_fraction(const char *display)
 			else
 			{
 				num_filled = sscanf(buffer,"%d/%d", &n, &d);
+
+				if (d == 0) 
+				{
+					free_malloc(buffer);
+					continue;
+				}
+
 				if (num_filled == 2)
 				{
 					rtn = SUCCESS;
