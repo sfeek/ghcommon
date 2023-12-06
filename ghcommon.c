@@ -1,10 +1,12 @@
 // Version 2.5
 #include "ghcommon.h"
+#include <math.h>
 
 #ifdef _WIN32
 #include <complex.h>
-#include <math.h>
 #endif
+
+
 
 int append_string(char **s1, char *s2)
 {
